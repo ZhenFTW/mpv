@@ -518,6 +518,11 @@ error:
     return false;
 }
 
+static bool d3d11_headless_init(struct ra_ctx* ctx) {
+    struct priv* p = ctx->priv = talloc_zero(ctx, struct priv);
+    p->is_headless = true;
+    return d3d11_init(ctx);
+}
 const struct ra_ctx_fns ra_ctx_d3d11 = {
     .type     = "d3d11",
     .name     = "d3d11",
@@ -525,4 +530,13 @@ const struct ra_ctx_fns ra_ctx_d3d11 = {
     .control  = d3d11_control,
     .init     = d3d11_init,
     .uninit   = d3d11_uninit,
+};
+
+const struct ra_ctx_fns ra_ctx_d3d11_headless = {
+    .type = "d3d11_headless",
+    .name = "d3d11_headless",
+    .reconfig = d3d11_reconfig,
+    .control = d3d11_control,
+    .init = d3d11_headless_init,
+    .uninit = d3d11_uninit,
 };
