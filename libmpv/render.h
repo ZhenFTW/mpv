@@ -479,6 +479,7 @@ typedef struct mpv_render_param {
 // See section "Software renderer"
 #define MPV_RENDER_API_TYPE_SW "sw"
 
+#define MPV_RENDER_API_TYPE_DXGI "dxgi"
 /**
  * Flags used in mpv_render_frame_info.flags. Each value represents a bit in it.
  */
