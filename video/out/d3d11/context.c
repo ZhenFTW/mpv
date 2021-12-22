@@ -108,6 +108,8 @@ struct priv {
     int64_t last_sync_qpc_time;
     int64_t vsync_duration_qpc;
     int64_t last_submit_qpc;
+    
+    bool is_headless; 
 };
 
 static int d3d11_validate_adapter(struct mp_log *log,
