@@ -35,7 +35,7 @@
 #include "video/mp_image.h"
 #include "video/mp_image_pool.h"
 #include "osdep/windows_utils.h"
-a
+
 #include "d3d.h"
 
 HMODULE d3d11_dll, d3d9_dll, dxva2_dll;
