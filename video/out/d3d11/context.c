@@ -532,11 +532,11 @@ const struct ra_ctx_fns ra_ctx_d3d11 = {
     .uninit   = d3d11_uninit,
 };
 
-const struct ra_ctx_fns ra_ctx_d3d11_headless = {
-    .type = "d3d11_headless",
-    .name = "d3d11_headless",
-    .reconfig = d3d11_reconfig,
-    .control = d3d11_control,
-    .init = d3d11_headless_init,
-    .uninit = d3d11_uninit,
-};
+// const struct ra_ctx_fns ra_ctx_d3d11_headless = {
+//     .type = "d3d11_headless",
+//     .name = "d3d11_headless",
+//     .reconfig = d3d11_reconfig,
+//     .control = d3d11_control,
+//     .init = d3d11_headless_init,
+//     .uninit = d3d11_uninit,
+// };
