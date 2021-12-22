@@ -25,6 +25,7 @@
 #include "video/out/gpu/spirv.h"
 #include "video/out/w32_common.h"
 #include "ra_d3d11.h"
+#include "headless_helper.h"
 
 static int d3d11_validate_adapter(struct mp_log *log,
                                   const struct m_option *opt,
@@ -510,7 +511,7 @@ static bool d3d11_init(struct ra_ctx *ctx)
         goto error;
 
     libmpv_dxgi_dev_out(p->device);
-    libmpv_dxgi_dev_out(p->swapchain);
+    libmpv_dxgi_swc_out(p->swapchain);
     return true;
 
 error:
