@@ -58,6 +58,7 @@ extern const struct ra_ctx_fns ra_ctx_d3d11;
 static const struct ra_ctx_fns *contexts[] = {
 #if HAVE_D3D11
     &ra_ctx_d3d11,
+    &ra_ctx_d3d11_headless,
 #endif
 
 // OpenGL contexts:
