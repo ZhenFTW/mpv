@@ -448,6 +448,7 @@ static void d3d11_uninit(struct ra_ctx *ctx)
     if (!p->is_headless) {
         vo_w32_uninit(ctx->vo);
     SAFE_RELEASE(p->device);
+    }
 
     // Destory the RA last to prevent objects we hold from showing up in D3D's
     // leak checker
