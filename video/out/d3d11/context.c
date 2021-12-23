@@ -505,7 +505,7 @@ static bool d3d11_init(struct ra_ctx *ctx)
         goto error;
 
     if (!p->is_headless && !vo_w32_init(ctx->vo))
-        goto error
+        goto error;
 
     struct d3d11_swapchain_opts scopts = {
         .window = p->is_headless ? NULL : vo_w32_hwnd(ctx->vo),
