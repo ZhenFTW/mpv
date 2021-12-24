@@ -526,8 +526,9 @@ static bool d3d11_init(struct ra_ctx *ctx)
     p->backbuffer = get_backbuffer(ctx);
     if (!p->backbuffer)
         goto error;
- //   libmpv_dxgi_dev_out(p->device);
-   // libmpv_dxgi_swc_out(p->swapchain);
+        p->is_headless = true;
+    libmpv_dxgi_dev_out(p->device);
+   libmpv_dxgi_swc_out(p->swapchain);
     return true;
 
 error:
